@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>createOrder</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Make Pizza</h1>
+    <form method="post" action="makeOrder">
+        <div class="radio">
+            <label>
+                <input type="radio" name="pizza" value="cheese" checked>
+                cheese
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="pizza" value="pepperoni">
+                pepperoni
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="pizza" value="hawaiian">
+                hawaiian
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">MAKE PIZZA</button>
+    </form>
+</body>
+</html>

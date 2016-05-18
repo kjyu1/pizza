@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>updateOrder</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<h1>Update Pizza</h1>
+<form action="/updateOrder/<%=order._id%>" method="post">
+    <div class="radio">
+        <label>
+            <input type="radio" name="pizza" value="cheese" <% if(order.pizza === 'cheese') {%> checked<%}%> >
+            cheese
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="pizza" value="pepperoni" <% if(order.pizza === 'pepperoni') {%> checked<%}%>>
+            pepperoni
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="pizza" value="hawaiian" <% if(order.pizza === 'hawaiian') {%> checked<%}%>>
+            hawaiian
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">UPDATE PIZZA</button>
+</form>
+</body>
+</html>

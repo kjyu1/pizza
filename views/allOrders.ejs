@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>allOrders</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <a href="logout" class="btn btn-danger">Logout</a>
+    <h1>Welcome, <%=email%><br> ORDERS:</h1>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <td>Order Info</td>
+                <td>Update/Delete</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0; i<orders.length; i++) {%>
+            <tr>
+                <td><%=orders[i].pizza%><br>--<%=orders[i].email%></td>
+                <!--<td><a href="updateOrder" class="btn btn-info">Update</a></td>-->
+                <td>
+                    <% if(email === orders[i].email) {%>
+                    <a href="/delete/<%=orders[i]._id%>" class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                    <a href="/showUpdatePage/<%=orders[i]._id%>" class="btn btn-info">Update</a>
+                    <% } %>
+                    <!--<a href="" class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></a>-->
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <a href="createOrder" class="btn btn-primary">Make Order!</a>
+</body>
+</html>
